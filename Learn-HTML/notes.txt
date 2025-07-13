@@ -1,0 +1,26 @@
+
+HTML is responsible for structure of website.
+Hyper Text Markup Language  - not a programming language(loops , if else) - we mark the things (img , link) which shows on browser
+It consist of elements(specifically defined).
+extension - .htm or .html
+Html element - building block of html
+<tagname> content </tagname> 
+Heading
+Paragraph
+Text Formatting
+List
+Imgaes
+Link
+div 
+span
+Table
+Forms
+Attribute - Special property added to Tag ex src href 
+anchor also used for File links - from one file to another file
+Semantic HTML - Grouping elements (Page Layout)
+Header
+Navbar
+Section
+article
+aside
+footer
