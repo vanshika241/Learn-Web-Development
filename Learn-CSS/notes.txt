@@ -1,0 +1,95 @@
+CSS is responsible for beuaty(layout , size , color) , proper orientation of website structure.
+Cascading Style Sheet 
+.css - extension
+CSS Syntax Rule
+selector {
+    property:value;
+}
+
+CSS Selectors
+Universal
+Element
+Id 
+Class
+
+Style Properties - 
+-color - hex, rgba , name
+-background-color 
+
+Font Styles-
+font-family
+font-Style
+font-weight
+text-decoration
+font-size
+
+Text Styles- 
+text-align
+line height
+letter spacing
+word spacing
+
+CSS Box Model - 
+Content - size h and w 
+padding - space outside content 
+border - outer to padding
+Margin - Space b/w 2 elements
+border-radius - boundary corners - 50% circle
+
+Cascaded Property - 
+1. The two rules which have same specificity then who came last will be applied
+2.Specificity - how browser decide which rule applied 
+3. !important>inline>id>class>element(preference)
+4.Inheritance - some property inherited from parent - color , font-size 
+
+CSS Tables - 
+border-collapse,height , width(table)
+border-bottom , padding(th,td )
+
+Display - 
+inline , block , inline-block , none
+
+Positions:
+static: Default position, ignores top/right/bottom/left.
+relative: Moves element relative to its original place.
+absolute: Positions relative to the nearest positioned ancestor.
+fixed: Stays fixed relative to the viewport, even on scroll.
+sticky: Behaves like relative until a scroll threshold, then acts fixed.
+
+CSS Units - 
+absolute – Positions element using exact units like px (default: 16px = 1em).
+relative – Moves element based on its original spot using units like em, rem, vh, vw.
+em – Relative to the font size of the parent element.
+rem – Relative to the root element’s font size (html, usually 16px).
+vh – 1% of the viewport height.
+vw – 1% of the viewport width.
+
+
+Flexbox- 
+parent - flex container
+
+parent prop - properties applied to inner children -  ex center div
+display - display
+justify content - row
+align-items - col ( for this first asssigned height of parent)
+flex-direction - row , row-reverse , col , col-reverse
+flex-wrap - wrap in next line 
+more than one row after wrap
+align-content - wrap - one main and cross exis
+row -gap
+column -gap
+
+Child properties - properties want to applied to specific child
+flex-grow
+flex-shrink
+align-self (cross x)
+margin-right ( used in navbar)
+
+
+
+
+
+
+
+
+
