@@ -1,0 +1,27 @@
+
+DOM - Document Object Model
+Used to access ,  change , create element from HTML
+4 Pillars of DOM 
+1.Selection or Get HTML Elements
+querySelector - "h1" , "#id" ,".class"
+querySelectorAll()	 -> 
+getElementById()	
+
+2.Changing HTML
+textContent 
+font-size
+
+3.Changing CSS 
+fontSize
+color
+backgroundColor
+
+4.Event Listener
+Ask your web App to respond 
+perform Actions while clicking
+ el.addEventListerner("eventName" , (evt)=>{
+    //perform action on that elemet here 
+ })
+ ex click , readystatechange
+
+
