@@ -1,0 +1,231 @@
+Object 
+Key - value pair in curly braces 
+access object key inside using this keyword
+const myObj = {
+    name:"CodeVibes",
+    currYear:2025,
+    hobbies:["Watching Movie","Coding","Sleep"],
+    Skills :{
+      DSA : "java",
+      Webd: "Mern",
+    },
+    action:function(){
+      return `My name is ${this.name} , My hobies are ${this.hobbies} and My skills are ${this.Skills.DSA} and ${this.Skills.Webd}`
+    }
+}
+console.log(myObj); print object 
+console.log(myObj.name); // print object key value
+console.log(myObj["currYear"]);
+console.log(myObj.hobbies[0]);
+console.log(myObj.Skills.DSA);
+console.log(myObj.action()); // print object function return 
+
+Object Inheritance 
+const truck = Object.create(vehicle) // truck get the property from vehicle
+truck.doors = 4;
+truck.seats = 2;
+
+Object properties 
+console.log(Object.keys(myFav)); print keys 
+console.log(Object.values(myFav)); print values
+
+for-in loop for Object - used for object for i (key) in obj --> obj{i}(value)
+for(let fav in myFav){ 
+    console.log(`My ${fav} is ${myFav[fav]}`);
+}
+delete any key of object
+delete myFav["favColor"]
+console.log(myFav);
+console.log(Object.hasOwnProperty("favColor")); T/F
+
+destructuring 
+ const { favSub : Study } = myFav;
+
+
+class Student{
+    constructor(name , learn){
+        this.name = name;
+        this.learn = learn;
+        this.cgpa = 0.00;
+        this.coreSub= [];
+    }
+     cgpaDisplay(){
+        return this.cgpa;
+    }
+     setCGPA(cg){
+        this.cgpa = cg;
+    }
+
+    addCore(sub){
+        this.coreSub.push(sub);
+    }
+    getCore(){
+     return this.coreSub;
+    }
+    display(){
+        console.log(`Hii , My name is ${this.name} and I am learning ${this.learn} and My CGPA is ${this.cgpa} and Core Subjects are ${this.coreSub}`);
+    }
+}
+
+const stu1 = new Student("Vanshika","JavaScript");
+stu1.setCGPA(8.75);
+console.log("My CGPA is ", stu1.cgpaDisplay()
+);
+stu1.addCore("DBMS")
+stu1.addCore("OS");
+stu1.display();
+
+
+Classes
+🔹 1. Basic Class: Student
+A class is a blueprint to create objects with properties and methods.
+The constructor() method initializes the object when created using new.
+this.name, this.learn, this.cgpa → public properties.
+
+Methods:
+setCGPA(cg) → updates CGPA.
+cgpaDisplay() → returns CGPA.
+addCore(sub) → adds a subject to core subjects list.
+getCore() → returns the list of core subjects.
+display() → logs all details of the student.
+
+Key Concepts:
+Class structure
+Constructor
+Public properties and methods
+Use of this
+class Pizza {
+    constructor(PizzaSize) {
+        this.size = PizzaSize;
+        this.crust = "original";
+    }
+    getCrust(){
+        return this.crust;
+    }
+    setCrust(pizzaCrust){
+      this.crust = pizzaCrust;
+    }
+}
+
+class SpecialPizza extends Pizza{
+    constructor(PizzaSize){
+        super(PizzaSize);
+        this.type = "The Works"
+    }
+    slice(){
+        console.log(`This is your ${this.size}${this.crust} ${this.type}`);
+    }
+}
+const sp = new SpecialPizza("large");
+sp.setCrust("medium")
+sp.slice()
+
+
+🔹 2. Inheritance – Pizza and SpecialPizza
+Inheritance allows a class (SpecialPizza) to use properties/methods from another class (Pizza) using extends.
+super() is used in child class constructor to call the parent class constructor.
+Pizza class has:
+size and crust as properties.
+getCrust() and setCrust() methods.
+SpecialPizza class adds a new property type and a custom method slice() to show pizza info.
+
+Key Concepts:
+Inheritance (extends)
+super() constructor call
+Method overriding
+Reusability of code
+
+function pizzaFactory(PizzaSize){
+    const crust = "medium"
+    const size  = PizzaSize;
+    return{
+        bake: ()=> console.log(`Baking a ${crust} ${PizzaSize}`)
+    }
+}
+
+const myPizza = pizzaFactory("large")
+myPizza.bake()
+
+🔹 3. Factory Function – pizzaFactory()
+A factory function returns an object and can encapsulate private data using closures.
+Variables declared inside the function (crust, size) are not accessible outside.
+Only exposed method: bake() – prints the pizza details.
+
+Key Concepts:
+Factory function pattern
+Closures for data privacy
+Encapsulation without using class
+
+class Burger{
+    price = 99;
+    fries = "yes";
+    #type = "";
+    #tomato = "yes";
+    #cheese;
+    constructor(burgerType,tomatoInc,cheeseInc){
+        this.#type = burgerType;
+        this.#tomato = tomatoInc
+        this.#cheese = cheeseInc;
+    }
+    getPrice(){
+        return this.price;
+    }
+    setFries(friesInc){
+        this.fries = friesInc;
+    }
+    yourOrder(){
+        console.log(`Your ${this.#type} Burger with ${this.fries} fries  and ${this.#cheese} Cheese , ${this.#tomato} tomato. And your price is ${this.price}`);
+    }
+
+}
+
+const myBurger = new Burger("Veg","No", "No" );
+const bhaiyaBurger = new Burger("Veg","No", "Yes" );
+
+myBurger.yourOrder()
+bhaiyaBurger.yourOrder()
+
+🔹 4. Private Fields – Burger Class
+Private fields are declared using # (introduced in ES2022).
+Private properties: #type, #cheese, #tomato → accessible only inside the class.
+Public properties: price, fries
+
+Methods:
+setFries() → sets the value of fries.
+getPrice() → returns the burger price.
+yourOrder() → prints a summary of the burger order.
+
+Key Concepts:
+Data hiding with #privateFields
+Public vs private members
+Secure internal state management
+
+JSON 
+JavaScript Object Notation
+JSON is a text format that is language independent
+JSON is use to send and recieve data
+Methods of object not passed
+JSON.stringify(obj) (send ) --> JSON.parse(obj)(receive)
+const pen = {
+    ink : "blue",
+    type : ["Pilot","Doll pen","Golden"],
+    write: function(){
+        console.log(`I am ${this.ink} pen and my type is ${this.type}`);
+    }
+
+}
+console.log(pen);
+console.log(pen.ink);
+console.log(pen.type);
+console.log(pen.write());
+
+const sendData = JSON.stringify(pen)
+console.log(sendData);
+
+const receiveData = JSON.parse(sendData)
+console.log(receiveData); // method not send or recieve
+
+
+
+
+
