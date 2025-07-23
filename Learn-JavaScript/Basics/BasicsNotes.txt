@@ -1,0 +1,219 @@
+JAVASCRIPT
+
+to print anything in console
+console.log("..")
+console.table([,,]) multiple values
+alert("CodeVibes") - give pop msg on browser
+
+Variables - used to store data so that we can access it after
+let/const/var var_name = value; 
+  Declaration             initialization
+let - declared once reassign many times
+const - declared once with fixed value and then can't channge it.
+var - declaration and reassign both many times
+
+Data Types- type of data we are using 
+1.String - " " 
+2.Number - int , float 
+3.Boolean - true/false
+4.undefined - let ans; value not assigned now but assigned after
+
+Operators - 
+🔹 Arithmetic Operators – +, -, *, /, %, **
+🔹 Assignment Operators – =, +=, -=, *=, /=, %=, **=, &=, |=, ^=, <<=, >>=, >>>=
+🔹 Comparison Operators – ==, ===, !=, !==, >, <, >=, <=
+🔹 Logical Operators – &&, ||, !
+🔹 Bitwise Operators – &, |, ^, ~, <<, >>, >>>
+🔹 Unary Operators – +, -, !, typeof, void, delete
+🔹 Ternary Operator – ? :
+
+String concatenation - Check output and then analyze 
+44+"abc" = "44abc"
+"a"+"b" - ab
+"44"+""67" - "4467"
+
+How to add js - 
+internal 
+script tag 
+external file -script -> src
+
+String Methods - 
+let sub = "Mathematics" 
+console.log(sub);
+console.log(sub.length); // also count space
+console.log(sub.charAt(3)); // give char based on zero based
+console.log(sub.indexOf('ma')); // give first index
+console.log(sub.lastIndexOf('a'));//give last index
+console.log(sub.slice(0,4));// 4 is exclusive - 0+1+2+3 String
+console.log(sub.toUpperCase()); 
+console.log(sub.toLowerCase());
+console.log(sub.includes("max"));//return boolean
+console.log(sub.split("m")); // split into left and right
+
+Number
+let num = 56;
+let strNum = "45.787";
+let random = "23abc"
+console.log(num);                         // 56
+console.log(typeof num);                 // number
+console.log(num == "56");                // true
+console.log(num === "56");               // false
+console.log(typeof Number(strNum));      // number
+console.log(Number(random));             // NaN
+console.log(Number(true));               // 1
+console.log(Number.parseInt(strNum));    // 45
+console.log(Number.parseFloat(num));     // 56
+console.log(Number.parseInt(random));    // 23
+console.log(56.789.toFixed(2));          // 56.79
+console.log(Number.isInteger(num));      // true
+
+Math Properties
+console.log(Math.PI);
+console.log(Math.trunc(7.89)); // 7
+console.log(Math.round(7.89)); // 8
+console.log(Math.floor(7.89)); // 7
+console.log(Math.ceil(7.89));//8
+console.log(Math.pow(5,5)); // 3125
+console.log(Math.min(3,6,4,8)); // 3
+console.log(Math.max(3,6,4,8)); //8
+console.log(Math.random());// gives number range from 0 to 1 0<n<1
+//for particular range - Math.random()*maxrange + min- its floor - bcz integer - not ceil becase range is exclusive(10+1 == 11)
+console.log(Math.floor(Math.random()*10+1));
+
+Conditionals
+Whenever there is any different answer for particular input or we have to check the values
+if(condition == true){
+  run this
+}
+else if(condition == true){
+  if more than one condition write else if
+  run this
+}
+else{
+  if conditition is false
+  run this
+}
+
+switch - when there is so many if-else if choices - it is better to represent
+switch(condition){
+  case valueOfConditio1 : run this code (if this condition is true) 
+  break // means skip all and move out of this
+
+   case valueOfConditio2 : run this code (if this condition is true) 
+  break // means skip all and move out of this
+
+  default - else run this
+
+}
+
+Ternary Operator
+condition? ifTrue - this is run : ifFalse this is run
+
+Taking Input - 
+alert()
+confirm()
+prompt()
+
+store their response in variable and use it.
+
+Loops -
+
+🔹while loops 
+let number = 0;
+while(number<20){
+    console.log(number);
+    number++;
+}
+
+🔹do while
+let cnt = 50;
+do{
+    console.log(cnt);
+    cnt++;
+}while(cnt<=50)
+
+🔹for loop
+for(let i=0;i<10;i++){
+    console.log(`Hii ${i}`);
+}
+
+🔹break - it break the loop
+let name = "CodeVibes";
+let leng = name.length;
+let itr = 0;
+while(itr<leng){
+    if(itr == 4)break
+    console.log(name.charAt(leng));
+    itr++;
+}
+
+🔹continue - just skip that iteration 
+let j = 0;
+while (true) {
+    if(j == 3)continue;
+    if(j == 5)break;
+    console.log(`Hii from CodeVibes ${j}`);
+    j++;
+}
+
+Function - to perform particular action which can be use multiple times aur every time 
+function sum(a,b){ // declaration
+    return a+b; //create
+}
+console.log(sum(6,7)); //calling
+
+Arrow Function - ES6 Advanced version
+const formatName = (name)=>{
+  return name.charAt(0).toUpperCase() + name.slice(1).toLowerCase();
+}
+
+console.log(formatName("codeVibes"));
+
+Scope of - let/var/const
+✅ var ke points:
+Function Scoped hota hai – agar var kisi function ke andar declare kiya hai, to woh sirf us function ke andar hi accessible hoga.
+Block Scoped nahi hota – agar if, for, ya {} ke andar declare karoge to bhi woh block ke bahar access ho jaata hai.
+Re-declare kar sakte ho – same scope mein dobara var likhna allowed hai.
+Hoisting hoti hai – upar le jaata hai code ko, lekin undefined ke saath.
+Use karna outdated hai – modern JS mein var avoid karte hain.
+
+✅ let ke points:
+Block Scoped hota hai – sirf {} ke andar jahan declare hua hai, wahi access hoga.
+Re-declare nahi kar sakte – same scope mein dobara let nahi likh sakte.
+Re-assign kar sakte ho – value badal sakte ho baad mein.
+Hoisting hoti hai, lekin usse pehle access karoge to error aata hai (Temporal Dead Zone).
+Modern JS mein use hota hai – jab variable ki value change hone wali ho.
+
+✅ const ke points:
+Block Scoped hota hai – jaise let, sirf us block mein kaam karta hai.
+Re-declare nahi kar sakte – same scope mein dobara declare karoge to error.
+Re-assign bhi nahi kar sakte – ek baar value di, fir change nahi kar sakte.
+Constant values ke liye use hota hai – jaise fixed config, API key, etc.
+Objects aur Arrays ke reference fix hote hain, lekin unke andar ka data change kar sakte ho.
+
+Arrays - when we want to store more data which is not feasible for variables - easily access and many operations 
+const arr = []; // zero based indexing
+arr[0] = 10; // assign manually 
+console.log(arr); // print arr in console
+console.log(arr.length); // arr size
+console.log(arr[arr.length-1]); // last element
+arr.push(14);//add in last
+arr.unshift(8) // add first
+arr.pop() // remove from last
+arr.shift() // remove from first
+// delete arr[1];  // here el del but indexing not change it put empty their
+// console.log(arr[1]);
+// console.log(arr);
+console.log(arr.slice(0,2)); // 0 se 1 tak
+arr.splice(2,2,16);// used to get , remove , replace 
+console.log(arr.reverse()); // reverse the array
+console.log(arr.join().split(",")); // arr to string and then string to array
+const a = [1,2,3]
+const b= [4,5,6]
+const c= [7,8,9]
+console.log(a.concat(b)); // 1 arrays concat
+console.log([...a,...b,...c]); // more than 2 arrays concat
+const combine =  [a,b,c] // Multi dimensionaly array - 2d
+console.log(combine); 
+console.log(combine[0][1]);
+
