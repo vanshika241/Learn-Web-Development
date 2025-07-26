@@ -1,0 +1,100 @@
+
+Storage - Web API Storage (Local and Session Storage)
+Storage - Web Storage API 
+Not part of DOM - refers to the window API 
+Available to JS via the gloabal variable - window 
+session storage not  remain same as we reload  - it clear automattically
+session storage only store data in form of string(JSON Imp functions)
+localStorage stored permanently even after reload it esixt
+
+const myObj = {
+    name : "CodeVibes",
+    age : 21,
+     arr :["Code" ,"Tea"  ,"Create"],
+    printName:function(){
+        console.log(`My name is ${this.name}`);
+    }
+}
+const arr2 = ["Code" ,"Tea"  ,"Create"]
+
+myObj.printName()
+console.log(myObj.name);
+
+sessionStorage.setItem("myStore1",JSON.stringify(arr2)); - Key value pair
+const get = sessionStorage.getItem("myStore1"); 
+console.log(get);
+myStore1 - Key
+localStorage.setItem("myStore1",JSON.stringify(arr2));
+const get = localStorage.getItem("myStore1");
+
+remove item
+localStorage.clear() // to clear everything - when more than 1 local data 
+ localStorage.removeItem("myStore1") - remove specific 
+const key = localStorage.key(0) - access key by zero based indexing
+console.log(get);  
+console.log(localStorage.length); - total no of keys
+console.log(key);
+
+
+Modules - 
+It is used to export other file and import the file in curr file to use their functions 
+export - 
+used in which functions you want to use in your file 
+export default f_name (only one function as default)
+export {f_1,f_2} - other function
+import - 
+used in curr file to extract export function 
+import f_name from 'link of fike' - default only name else {f1,f2}
+also change the reference name 
+import {f_name as f} form 'link'
+to import all functions from that file - 
+import * as NameAny from 'link' - used clg(NameAny.f_name()) - if f_name is default use NameAny.f_name() ELSE IT GIVE ERROR
+
+Class is also import just like that  import class_Name form 'link' and use it properties and functions 
+
+Higher Order Functions 
+Take one or more function as an argument 
+return the function 
+general syntax , 
+array.func_name((argument)=>{
+    //body of function 
+})
+
+forEach 
+posts.forEach((post)=>{
+    console.log(post);
+})
+
+filter
+const filterArray = posts.filter((post)=>{
+    return post.userId === 1;
+})
+console.log(filterArray);
+
+map
+const mapArray = filterArray.map((post) =>{
+    return post.id*10;
+})
+console.log(mapArray);
+
+reduce
+const reduceArray = mapArray.reduce((sum , post)=>{
+     return sum + post;
+})
+console.log(reduceArray);
+
+Asynchronous Code
+JS is a synchronous language
+execute the code line by line 
+setTimeOut(func, time) - all other function go to call stack and start executing if they are synchronous but this is Asynchronous so it go to CallBack Queue take it time as mention and then come to callstack and then execute 
+Diagram - AsyncCodeDiagram Image give the flow 
+
+console.log(1);
+setTimeout(()=>{
+    console.log(2);
+},0)
+console.log(3);
+
+
+
+
