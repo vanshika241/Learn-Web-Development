@@ -1,0 +1,55 @@
+Callbacks - function passed as an argument of another function and input the required function inplace of that while calling.
+it helps to reduce code repetition
+recursion means function calling itself here function pass another function as an argument.
+function square(n){
+    return n*n;
+}
+function cube(n){
+    return n*n*n;
+}
+function sumofInput(a,b,callbackFunc){ 
+    let cal1 = callbackFunc(a);
+    let cal2 = callbackFunc(b);
+    return cal1+cal2;
+}
+console.log(sumofInput(2,3,square)); - only name passed not square()
+
+Asynchronous function
+JS Thread doesn't have access to run everything immediately - some task take time (ex - reading file first it get access from OS)
+So that code don't stop running we make such tasks Async and when its waiting time complete it run before that code after this running.
+Async 3 examples use cases - 
+Reading a file
+Sending network request
+delibirate Timeout functions 
+setTimeout(()=>{
+    console.log("Hello CodeVibes");
+},2000)
+// readFile("AdvNotes.txt", onDone)
+console.log("Hii There"); - it first print 
+
+Internally Working - 
+CallStack -every  function and condition called in stack  - at a time only one function run 
+Web Apis - setTimeOut is not a part  of sync js - browser provide js these function - Async function loaded here and process it waiting time tasks 
+Callback Queue - from web Apis function come to this queue and when curr func in stack completed this go to stack and execute the tasks.
+
+Promises - 
+more readble 
+Way to write your own Async function without Callback
+promise is a class
+callback - take function as an input in argumnet not return anythng that input function is a caller but this lead to callback hell.
+promise - not take function as an input and return p which is a caller here and then do which is a task
+
+let p = new promise(function(resolve){ - syntax of promise
+
+})
+return p;
+calling promise
+const ans = f_name(inp) - here if i print ans it shows promise<pending> - instance of this promise class
+ans.then(function(){
+    logic for resolve
+})
+
+promise 3 states- 
+pending - .then not called undefined
+fullfilled - .then () called successfully
+rejected - if .then() not the given condition then rejected or run catch
