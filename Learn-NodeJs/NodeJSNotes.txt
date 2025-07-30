@@ -1,0 +1,78 @@
+Node JS and runtime
+
+1.ECMAScript - It is a scripting language specification(docs) on which JS based. It careate rule for JS which a compiler must follow 
+guidelines and rules 
+ES5, ES6 - Versions
+
+2.JavaScript - It is a scripting langugae that conforms specification of ECMAScript(var, let , const , functions , conditionals) but it also constains additional features which are not part of ECMA ex DOM, setTimeOut but they are crucial for Webd.
+implementaion 
+JS Compilers Engine - V8 (Used inside google chrome in C) and SpiderMonkey(Used in FireFox in C+Rust) - must follow ecma standards 
+Node js use V8
+JS Code ->ENGINE->0s and 1s
+
+3.Node js
+Before we write html,css, js and js run on browser VB Engine and other language like Java and Go used for backend but then some smart people realized that let take out this V8 Engine and add some extra functionality which JAVA doing for backend ex Readfile , creating HTTP Server and thus JS now a backend language also and the environment which run JS on our machine is Node js run time(it run JS).
+
+Nodejs is not a language not framework
+
+4.Bun - 
+Node js is generally slow, Bun is faster.
+Competitor of Node js but much better its written in Zig
+
+What can you we do with Nodejs - 
+1.Create Clis (Terminal)
+2.Create Video Player
+3.Create a game
+4.Create an HTTP Server(imp)
+
+What is HTTP Server- 
+Hyper text transfer Protocol
+A protocol that is defined for machines to communicate (voice to zoom - zoom webdrtc protocol to our zoom account and we able to hear )
+most common way for your website frontend to its backend
+ex we search something and press enter then the request go to backend server(large data center) and then from their response come to our machine
+protocol that helps to send request from frontend and response back to fronted from backend(Node js) is called HTTP Server.
+
+HTTP Server- 
+expose to internet or backend Models but it maintains authentication 
+HTTP Server- some code that follows HTTP Protocol and able to communicate with clients(browsers)
+ex callApp in phone
+just like function - send input from clients , do some computation and return output
+
+Clients need to worry about for HTTP protocol - protocol- http , https
+-address or url , IP or ports backend server(https//google.com)
+-Route 
+-Headers , Body , Query parameter 
+- Method
+image 
+Server need to worry about - 
+- respond headers 
+- respond body 
+- status codes
+
+
+Things happen in your browser after you send request 
+ - Browser parses the url
+ - Does a DNS Lookup(convert google.com to IP address) 
+ - Establishes a connection to the IP(does handshake)
+
+Things happen on your server after recieved request 
+- You get input(route , headers , body)
+- You do dome logic , computation used backend model and data 
+- you return the output body , headers and status code
+
+HTTP Methods - 
+GET 
+POST 
+PUT 
+DELETE
+
+HTTP Status code - 
+200 - everything ok - response successful
+404 - page/route not found
+403 - Authorization issues
+500 - Internal Server error(bug,crash, request not processed from BE)
+
+How do i cretae my own http server , 
+my website - anyone can visit
+
+
