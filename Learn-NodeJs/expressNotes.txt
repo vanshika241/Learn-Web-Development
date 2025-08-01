@@ -1,0 +1,33 @@
+express is a library to create HTTP Server
+express underhood written in c/c++ 
+npm init -y
+npm install express - to run locally on my machine from internet
+const express = require('express)
+const app = express() - initialize 
+
+Express is not a default library we have to install it but fs is a default we don't have to download it.
+Node js run time enviromnent help to run this code 
+app.get - helps to render the response on screen and running logic 
+app.post - help to enter the request - we use postman for this
+
+body parser - give body 
+npm install body-parser 
+const bodyParser = require('body-parser');
+ send somehthing - post function
+ get on page - get function 
+http://localhost:3000/?n=3 here ?n=3  after question mark they are query parameters to get value from url
+
+
+HTTP Methods - 
+GET - get the data from url request and run the logic and send the data 
+POST - Create new linkedin account , post something in backend 
+PUT - Update username , password - replace
+DELETE - Delete the account , data from backend 
+
+Status code - Signal to frontend 
+200 - everything went fine
+404 - Doctor is not in hospital - Unavailable error 
+500 - Mid surgery light went away - error between operation
+411- inputs were incorrect 
+403 - you dont have access
+
