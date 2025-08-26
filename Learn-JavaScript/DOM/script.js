@@ -1,47 +1,23 @@
-const initApp =()=>{
-    const get = document.querySelector("#intro")
-console.log(get);
-get.addEventListener("click",(evt)=>{
-    console.log(evt.target);
+
+let num1 = document.getElementById("num1")
+let num2 = document.getElementById("num2")
+let btn = document.getElementById("btn")
+btn.addEventListener("click",()=>{
+    let sum =Number ( num1.value )+ Number(num2.value);
+    document.getElementById("ans").textContent = sum;
 })
 
-let el = document.querySelector("h1")
-console.log(el);
-el.innerHTML = "Hii CodeVibes"
-el.style.color= "red"
-el.style.backgroundColor = "black"
-el.style.fontSize = "30px"
-el.style.lineHeight = "50px"
-
-
-}
-document.addEventListener("readystatechange",(event)=>{
-    if(event.target.readyState === "complete"){
-        console.log("readyState: complete");
-        initApp();
-    }
-});
-
-const body = document.querySelector("body")
-
-const btn = document.querySelector("#change")
-console.log(btn);
+let mode = document.getElementById("mode")
 let light = true;
-btn.addEventListener("click",(e)=>{
+mode.addEventListener("click",()=>{
     if(light == true){
-        body.style.backgroundColor = "black"
-        btn.style.backgroundColor = "white"
-        btn.style.color = "black"
-        body.style.color = "white"
+        document.querySelector("body").style.backgroundColor = "black"
         light = false;
     }
     else{
-        body.style.backgroundColor = "white"
-        btn.style.backgroundColor = "black"
-        btn.style.color = "white"
-        body.style.color = "black"
-
+        document.querySelector("body").style.backgroundColor = "white"
         light = true;
     }
 })
+
 
