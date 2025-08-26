@@ -1,11 +1,24 @@
 
 DOM - Document Object Model
+
+DOM - It is a API programming interface for web documents , It represent the page so taht programs can change the document struxture, style and content. The DOM represents the document as a tree of objects , each object represent as a part of the page.
+
+Before DOM - 
+Ecma rules - JS(V8 Engine - web browser) - > Bits 
+but there are so many which not provide by ecma like Set time ,Document , fetch - these are provided by web browsers
+
+Change the dynamic and rendering on the screen 
+by use DOM API we access html elements 
+document - gloabal variable use to manipulate and access the dom function and properties
+it print dom object on console 
+
 Used to access ,  change , create element from HTML
 4 Pillars of DOM 
 1.Selection or Get HTML Elements
 querySelector - "h1" , "#id" ,".class"
-querySelectorAll()	 -> 
+querySelectorAll() -> 
 getElementById()	
+class gives array so access it carefully 
 
 2.Changing HTML
 textContent 
@@ -23,5 +36,7 @@ perform Actions while clicking
     //perform action on that elemet here 
  })
  ex click , readystatechange
+
+
 
 
